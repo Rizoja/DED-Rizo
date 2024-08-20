@@ -22,18 +22,24 @@ Create a blackjack function that:
 
 */
 
+void swap(int *a, int *b){
+        int c = *a;
+        *a = *b;
+        *b = c;
+    }
+
+
+
+
 int main()
 {
   CLEAR
   /* Exercise 1:  swap num1 and num2 value */
   int num1 = 10;
   int num2 = 20;
+    swap(&num1, &num2);
+    printf("numero 1: %d %d numero 2: ",num1,num2);
 
-    void swap(int *a, int *b){
-        int c = *a;
-        *a = *b;
-        *b = c;
-    }
 
 
 
