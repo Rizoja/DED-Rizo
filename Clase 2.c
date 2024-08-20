@@ -29,7 +29,11 @@ int main()
   int num1 = 10;
   int num2 = 20;
 
-    
+    void swap(int *a, int *b){
+        int c = *a;
+        *a = *b;
+        *b = c;
+    }
 
 
 
