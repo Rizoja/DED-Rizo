@@ -28,7 +28,11 @@ void swap(int *a, int *b){
         *b = c;
     }
 
+int blackjack(int num1, int){
 
+
+    
+}
 
 
 int main()
@@ -38,10 +42,7 @@ int main()
   int num1 = 10;
   int num2 = 20;
     swap(&num1, &num2);
-    printf("numero 1: %d %d numero 2: ",num1,num2);
-
-
-
+    printf("numero 1: %d numero 2: %d",num1,num2);
 
   /* Exercise 2:  Blackjack 
     Call and test your program here */
