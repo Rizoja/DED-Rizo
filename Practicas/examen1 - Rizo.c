@@ -23,13 +23,15 @@ Alumno: _Jesús Antonio Rizo Muñiz____
     ============================================================
 
   1: Describe qué es un apuntador y cuál es su tamaño (no importa tanto el número bytes, sino la teoria detras del tamaño)
-    R:
+    R: Un apuntador es una variable que guarda la dirección de memoria de otra variable... El apuntador apunta a una ubicación en la memoria donde hay un valor
+    almacenado y el tamaño de estos depende de la arquitectura de la computadora, en una de 64 bits los apuntadores tienen un tamaño de 8 bytes, independiente 
+    a que sean de tipo char, int, etc. ya que todos almacenan direcciones de memoria.
       
   2: Cuando se declara un apuntador, por qué es necesario declarar también el tipo de dato al que apunta?
-    R:
+    R: 
 
   3: Cuál es la diferencia entre pasar por valor y pasar por referencia?
-    R:   
+    R: 2  
 
   4: Qué es necesario hacer para acceder a los datos de una variable de tipo void *?
     R:
