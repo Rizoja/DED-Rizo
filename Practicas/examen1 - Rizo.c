@@ -253,6 +253,7 @@ ptr_to_int_func_int_char p_escribe_doble;
 
 //funciones a punteros
 
+
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
 /* Fin ejercicio 03 */
@@ -272,16 +273,25 @@ Solo apuntadores y aritmetica de apuntadores.
  */
 void examen04()
 {
-  //int arreglo[3] = {/*No vale inicializar aqui */};
-  //char las_letras[3] = {/*No vale inicializar aqui */};
+  int arreglo[3];
+  char las_letras[3];
 
   /* ------------------- INICIA RESPUESTA   ------------------ */
+  //valores al arreglo
+  *(arreglo + 0) = 30;
+  *(arreglo + 1) = 50;
+  *(arreglo + 2) = 99;
+
+  //valores al arreglo las_letras
+  *(las_letras + 0) = "z";
+  *(las_letras + 1) = "x";
+  *(las_letras + 2) = "y";
 
   /* ------------------- FIN RESPUESTA   ------------------ */
   
   for(int i = 0; i < 3; i++)
   {
-    //printf("%d - %c \n", arreglo[i], las_letras[i]);
+    printf("%d - %c \n", arreglo[i], las_letras[i]);
   }
 }
 
