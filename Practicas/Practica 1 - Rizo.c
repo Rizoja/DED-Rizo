@@ -77,7 +77,7 @@ void ex02()
   Implement a function mylenght() that returns the size of the passed 
   string (char array). DO NOT USE strlen(), use only pointer arithmetic.
 
-  DO NOT USE BRACKETS [ ]
+  DO NOT USE BRACKETS [ ] 
 
   TIP: all strings are array of chars, terminated by '\0' character.
 */
