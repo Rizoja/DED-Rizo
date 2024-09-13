@@ -171,7 +171,7 @@ int examen02()
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
   
-  convertirTemp(&grados, &tipo
+  convertirTemp(&grados, &tipo);
 
   /* ------------------- FIN DE RESPUESTA   ------------------ */
 
@@ -237,6 +237,21 @@ int escribe_doble(int *num, char letra)
 
 /* Declara tus punteros a funcion aqui: */
 /* ------------------- INICIO RESPUESTA   ------------------ */
+
+//typedefs
+typedef void (*ptr_to_void_func_int)(int *);
+typedef int (*ptr_to_int_func_int)(int *);
+typedef char* (*ptr_to_char_func_int_char)(int *, char **);
+typedef int (*ptr_to_int_func_int_char)(int *, char);
+
+//punteros a función
+ptr_to_void_func_int p_cuadrado;
+ptr_to_int_func_int p_triplica;
+ptr_to_char_func_int_char p_convierte;
+ptr_to_int_func_int p_duplica;
+ptr_to_int_func_int_char p_escribe_doble;
+
+//funciones a punteros
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
