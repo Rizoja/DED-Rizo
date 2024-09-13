@@ -31,10 +31,11 @@ Alumno: _Jesús Antonio Rizo Muñiz____
     R: 
 
   3: Cuál es la diferencia entre pasar por valor y pasar por referencia?
-    R: 2  
+    R: La diferencia entre pasar por valor y pasar por referencia es la forma en que las funciones van a manejar los datos cuando se pasan como argumentos de una función
+    Pasar por valor es cuando no quieres modificar el valor original y solo lo haces con una copia y por referencia es necesario si quieres modificar el valor original desde la función.  
 
   4: Qué es necesario hacer para acceder a los datos de una variable de tipo void *?
-    R:
+    R: 
 
   5: Cómo se recomienda inicializar un apuntador, y por qué es importante esta práctica?
     R:
