@@ -28,17 +28,18 @@ Alumno: _Jesús Antonio Rizo Muñiz____
     a que sean de tipo char, int, etc. ya que todos almacenan direcciones de memoria.
       
   2: Cuando se declara un apuntador, por qué es necesario declarar también el tipo de dato al que apunta?
-    R: 
+    R: Es necesario declarar el tipo de dato al que apunta un apuntador para que el compilador sepa cuántos 
+    bytes debe leer o escribir en la memoria y cómo interpretar el contenido al que el apuntador está apuntando.
 
   3: Cuál es la diferencia entre pasar por valor y pasar por referencia?
     R: La diferencia entre pasar por valor y pasar por referencia es la forma en que las funciones van a manejar los datos cuando se pasan como argumentos de una función
     Pasar por valor es cuando no quieres modificar el valor original y solo lo haces con una copia y por referencia es necesario si quieres modificar el valor original desde la función.  
 
   4: Qué es necesario hacer para acceder a los datos de una variable de tipo void *?
-    R: 
+    R: Debes de "castear" un apuntador a un tipo de dato para que el compilador lo pueda leer e interpretar los datos que el apuntador void contiene.
 
   5: Cómo se recomienda inicializar un apuntador, y por qué es importante esta práctica?
-    R:
+    R: Una buena práctica es inicializar el apuntador en NULL, nos garantiza que al hacer uso de este apuntador no apunte a una ubicación aleatoria en memoria y tengamos un código mucho más ordenado.
 
 */
 
@@ -65,7 +66,22 @@ de texto, no esta permitido utilizar corchetes [] ni la funcion strlen.
 Pruebe que su programa funcione con los ejemplos programados
 */
 /*------------------- INICIO RESPUESTA   ------------------ */
- 
+
+void desencriptar(char *secreto) {
+    char *ptr = secreto;  // Usamos un apuntador
+    int pos = 1;          
+
+    while (*ptr != '\0') {
+        if (pos % 2 != 0) {
+            *ptr = *ptr + 1; // Si la posición es non, cambiamos la letra por la siguiente
+        } else {
+            
+            *ptr = *ptr - 2; //si es par regresamos 2 letras atras
+        }
+        ptr++;  
+    }
+}
+
    
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
