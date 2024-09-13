@@ -239,19 +239,24 @@ int escribe_doble(int *num, char letra)
 /* ------------------- INICIO RESPUESTA   ------------------ */
 
 //typedefs
-typedef void (*ptr_to_void_func_int)(int *);
-typedef int (*ptr_to_int_func_int)(int *);
-typedef char* (*ptr_to_char_func_int_char)(int *, char **);
-typedef int (*ptr_to_int_func_int_char)(int *, char);
+typedef void (*ptr_func_void_int)(int *);
+typedef int (*ptr_func_int_int)(int *);
+typedef char* (*ptr_func_char_int_char)(int *, char **);
+typedef int (*ptr_func_int_int_char)(int *, char);
 
 //punteros a función
-ptr_to_void_func_int p_cuadrado;
-ptr_to_int_func_int p_triplica;
-ptr_to_char_func_int_char p_convierte;
-ptr_to_int_func_int p_duplica;
-ptr_to_int_func_int_char p_escribe_doble;
+ptr_func_void_int p_cuadrado;
+ptr_func_int_int p_triplica;
+ptr_func_char_int_char p_convierte;
+ptr_func_int_int p_duplica;
+ptr_func_int_int_char p_escribe_doble;
 
 //funciones a punteros
+//p_cuadrado = cuadrado;
+//p_triplica = triplica;
+//p_convierte = convierte;
+//p_duplica = duplica;
+//p_escribe_doble = escribe_doble; Me dan un error, no entiendo muy bien del todo porque pero luego lo voy a checar con más calma
 
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
@@ -452,7 +457,7 @@ int examen06(void) {
 
 int main()
 {
-  char nombre[20] = "TUNOMBRE";
+  char nombre[20] = "Jesus Antonio Rizo";
   printf("-Examen 01: \n\tPor: \t\t%s\n", nombre);
   
   printf("--------------------ex01 ------------------------\n");
