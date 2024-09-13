@@ -79,6 +79,7 @@ void desencriptar(char *secreto) {
             *ptr = *ptr - 2; //si es par regresamos 2 letras atras
         }
         ptr++;  
+        pos++;  
     }
 }
 
@@ -94,6 +95,9 @@ int examen01()
     //Llama tu funcion aqui, pruebala con la variable secreto.
     //Prueba con mas cadenas para garantizar su funcionamiento.
   
+    desencriptar(secreto);
+
+
   // FIN DE RESPUESTA
   
   printf("%s", secreto);
@@ -122,6 +126,26 @@ int examen01()
 /* ------------------- INICIO RESPUESTA   ------------------ */
 //Para la función.
 
+void convertirTemp(float *temperatura, char *tipo) {
+    if (*tipo == 'C' || *tipo == 'c') {
+        
+        // Convertir de C a F
+        *temperatura = (*temperatura * 9 / 5) + 32;
+        *tipo = 'F';  
+
+    } else if (*tipo == 'F' || *tipo == 'f') {
+        
+        // Convertir de F a C
+        *temperatura = (*temperatura - 32) * 5 / 9;
+        *tipo = 'C';  
+
+    } else {
+        printf("Tipo de temperatura no válido.\n");
+    }
+}
+
+
+
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
 
@@ -133,7 +157,9 @@ int examen02()
   printf("Temperatura actual es de: %.2f °%c\n", grados, tipo);
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
-  //covertir_temp(?,?);
+ 
+  convertirTemp(&grados, &tipo);
+
   /* ------------------- FIN DE RESPUESTA   ------------------ */
   
   printf("Que equivale a: %.2f °%c\n", grados, tipo);
@@ -144,7 +170,9 @@ int examen02()
   printf("Temperatura actual es de: %.2f °%c\n", grados, tipo);
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
-  //covertir_temp(?,?);
+  
+  convertirTemp(&grados, &tipo
+
   /* ------------------- FIN DE RESPUESTA   ------------------ */
 
   printf("Que equivale a: %.2f °%c\n", grados, tipo);
@@ -188,7 +216,7 @@ void cuadrado(int *num)
 int triplica (int *num)
 {
   *num = (*num + *num + *num);
-  return;
+  return*num;
 }
 
 char * convierte(int *ascii, char ** modificador)
@@ -229,8 +257,8 @@ Solo apuntadores y aritmetica de apuntadores.
  */
 void examen04()
 {
-  int arreglo[3] = {/*No vale inicializar aqui */};
-  char las_letras[3] = {/*No vale inicializar aqui */};
+  //int arreglo[3] = {/*No vale inicializar aqui */};
+  //char las_letras[3] = {/*No vale inicializar aqui */};
 
   /* ------------------- INICIA RESPUESTA   ------------------ */
 
@@ -238,7 +266,7 @@ void examen04()
   
   for(int i = 0; i < 3; i++)
   {
-    printf("%d - %c \n", arreglo[i], las_letras[i]);
+    //printf("%d - %c \n", arreglo[i], las_letras[i]);
   }
 }
 
@@ -344,7 +372,7 @@ int examen06(void) {
 
   int numbers[MAXELEM];
   int doubles[MAXELEM], triples[MAXELEM];
-  void * MyData[5] = {};
+  void * MyData[5] = {0};
   void **ptrToMyData = MyData;
 
   printf("==== init ====\n");
