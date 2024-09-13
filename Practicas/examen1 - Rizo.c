@@ -401,7 +401,7 @@ El objetivo es:
 void * foo(void *args)
 {
   /* ------------------- RESPUESTA   ------------------ */
-  //f
+  //fff
   /* ------------------- RESPUESTA   ------------------ */
   /* Aqui va la solucion del Ejercicio 06 */
   return NULL;
