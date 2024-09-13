@@ -283,9 +283,9 @@ void examen04()
   *(arreglo + 2) = 99;
 
   //valores al arreglo las_letras
-  *(las_letras + 0) = "z";
-  *(las_letras + 1) = "x";
-  *(las_letras + 2) = "y";
+  *(las_letras + 0) = 'z';
+  *(las_letras + 1) = 'x';
+  *(las_letras + 2) = 'y';
 
   /* ------------------- FIN RESPUESTA   ------------------ */
   
@@ -314,6 +314,13 @@ void examen04()
 */
 /* ------------------- RESPUESTA   ------------------ */
 // Declara tu función aquí
+
+typedef struct {
+    int numero;
+    char letra;
+} Estructura;
+
+
 
 
 int examen05()
