@@ -316,15 +316,37 @@ void examen04()
 // Declara tu función aquí
 
 typedef struct {
-    int numero;
+    int valor;
     char letra;
 } Estructura;
 
+int mult_condicional(void *ptr_estructura, int valor_adicional) {
+    Estructura *estructura = (Estructura *)ptr_estructura;  // Convertimos el void a Estructura
 
+    
+    if (estructura->letra == 'a' || estructura->letra == 'b' || estructura->letra == 'c') {
+        return 0;
+    } else {
+        // si no es ninguna letra, regresamos la multiplicación y el valor adicional
+        return estructura->valor * valor_adicional;
+    }
+}
 
 
 int examen05()
 {
+
+    Estructura estructura1 = {3, 'b'};  // Primer valor es 3, letra es 'b'
+    Estructura estructura2 = {8, 'd'};   // Primer valor es 8, letra es 'd'
+
+    // Prueba 1
+    int resultado1 = mult_condicional(&estructura1, 7);
+    printf("Resultado 1: %d\n", resultado1);  // Debería imprimir 0
+
+    // Prueba 2
+    int resultado2 = mult_condicional(&estructura2, 6);
+    printf("Resultado 2: %d\n", resultado2);  // Debería imprimir 48
+
 
   return 0;
 }
