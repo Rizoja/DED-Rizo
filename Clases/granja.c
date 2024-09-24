@@ -146,10 +146,10 @@ int main()
   
   /* step two, for each ptr, we need another malloc */
 
-  /*for(int x = 2; x < FARMSIZE; x++)
+  for(int x = 2; x < FARMSIZE; x++)
   {
     farm[x] = create_pollo(x);
-  }*/
+  }
   
 
   /* print all the pollitos using a function that receives
@@ -161,7 +161,7 @@ int main()
   //No nos gustan los pollitos debiluchos, libera todos los pollitos
   //cuyos health points sean <= 35
   //
-  free_weak(farm, 35);
+  //free_weak(farm, 35);
 
 
   //TAREA #4
