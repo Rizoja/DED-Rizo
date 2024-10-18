@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Traete el codigo del STACK aqui, que necesitas hacerle para que
+//funcione? Son muy pocos cambios.
+
 /* OJO Todo este stack, funciona solo con numeros enteros, ya que 
 el nodo del Stack guarda un valor entero. En el proximo parcial
 veremos como mejorar esto y generalizarlo utilizando un 
@@ -84,33 +87,46 @@ void display()
   
 }
 
+void isvalidformula(char * formula)
+{
+  //Imprime aqui si la formula "f" recibida esta bien formada o no
+int indice = 0;
+    
+    // Recorremos la fórmula caracter por caracter
+    while (formula[indice] != '\0') {
+        if (formula[indice] == '(') {
+            // Insertar paréntesis de apertura en el stack
+            push(1);  // Usamos 1 para representar '('
+        } else if (formula[indice] == ')') {
+            // Si encontramos un paréntesis, realizamos pop
+            if (pop() == -1) {
+                // Si el stack estaba vacío, la fórmula no está bien
+                printf("La fórmula '%s' no está bien formada\n", formula);
+                return;
+            }
+        }
+        indice++;
+    }
+
+    // Verificar si el stack está vacío al final
+    if (stack_top == NULL) {
+        printf("La fórmula '%s' está bien formada\n", formula);
+    } else {
+        printf("La fórmula '%s' no está bien formada\n", formula);
+    }
+    
+    // Vaciar el stack si quedan elementos
+    while (stack_top != NULL) {
+        pop();
+    }
+
+}
+
 int main() 
 {
-  int choice, value, ret;
-  printf("\nSTACK:\n");
-  while (1) 
-  {
-    printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\n");
-    printf("\n\tChoice : ");
-    ret = scanf("%d", &choice);
-    switch (choice) 
-    {
-      case 1:
-        printf("\tEnter the value to insert: ");
-        ret = scanf("%d", &value);
-        push(value);
-        break;
-      case 2:
-        printf("Popped element is :%d\n", pop());
-        break;
-      case 3:
-        display();
-        break;
-      case 4:
-        exit(0);
-        break;
-      default:
-        printf("\nWrong Choice\n");
-    }
-  }
+  char formula1[30] = "aa()bb((c))(ddd((rr((a)a)))";
+  char formula2[30] = "((a+b)-(z*d))";
+
+  isvalidformula(formula1);
+  isvalidformula(formula2);
 }
