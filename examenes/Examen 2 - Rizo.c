@@ -94,18 +94,19 @@ node LD1nuevo, LD2nuevo;
 
 /* ----------  INICIO RESPUESTA:  --------------- */
 
-node* mandarInicio(node* head){
-  if (!head || !head ->next) return head;
-   node *prev = NULL, *curr = head;
+void mandarInicio(node** head){
+if (!*head || !(*head)->next) return;
+
+    node *prev = NULL, *curr = *head;
     while (curr->next) {
         prev = curr;
         curr = curr->next;
     }
     prev->next = NULL;
-    curr->next = head;
-    head = curr;
-    return head;
+    curr->next = *head;
+    *head = curr;
 }
+
 
 
 /* ----------  FIN RESPUESTA:  --------------- */
@@ -130,8 +131,8 @@ int ex01()
 /* ----------  INICIO RESPUESTA:  --------------- */
 // Espacio para que mandes llamar tu función y compruebes el resultado.
 
-  
-
+mandarInicio(&L1);
+mandarInicio(&L2);
 
 /* ----------  FIN RESPUESTA:  --------------- */
   
@@ -169,6 +170,14 @@ int ex01()
 */
 
 /* ----------  INICIO RESPUESTA:  --------------- */
+
+void insertMiddle(node* head, node* newNode){
+  if (!head || !newNode) return;
+
+  node *slow = 
+}
+
+
 
 /* ----------  FIN RESPUESTA:  --------------- */
 
