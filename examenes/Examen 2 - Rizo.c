@@ -237,6 +237,21 @@ int ex02()
 int ex03()
 {
   /* ----------  INICIO DE RESPUESTA:  --------------- */
+  node** arregloListas = (node**)malloc(6 * sizeof(node*));
+
+  arregloListas[0] = L1;
+  arregloListas[1] = L2;
+  arregloListas[2] = LD1;
+  arregloListas[3] = LD2;
+  arregloListas[4] = NULL;  
+  arregloListas[5] = NULL; 
+
+  for (int i = 0; i < 4; i++) {
+      printf("Lista %d:\n", i + 1);
+      printlist(arregloListas[i]);
+  }
+
+  free(arregloListas);
 
   /* ----------  FIN DE RESPUESTA:  --------------- */
   return 0;
@@ -345,7 +360,7 @@ int main()
   printf("\n=== E02: Ingresar nodo a la mitad\n");
   ex02();
   printf("\n=== E03: Arreglo de listas\n");
-  //ex03();
+  ex03();
   printf("\n=== E04: Destinos \n");
   //ex04();
   printf("\n=== E05: Password \n");
