@@ -289,7 +289,13 @@ int ex03()
 int ex04()
 {
 /* ----------  INICIO RESPUESTA:  --------------- */
-  
+  FILE *file = fopen("destinos.txt", "r+");
+
+
+
+
+
+
 /* ----------  FIN RESPUESTA:  --------------- */
   return 0;
 }
