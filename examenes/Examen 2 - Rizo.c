@@ -344,6 +344,12 @@ int ex04()
 int ex05()
 {
   /* ----------  INICIO RESPUESTA:  --------------- */
+  FILE *file = fopen("password.data", "rb");
+
+    int bandera;
+    int numero = 0;
+
+  //No me acuerdo mucho de el binario ;(
 
  /* ----------  FIN RESPUESTA:  --------------- */
   return 0;
