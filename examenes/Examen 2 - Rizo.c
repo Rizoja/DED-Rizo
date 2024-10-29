@@ -172,9 +172,18 @@ mandarInicio(&L2);
 /* ----------  INICIO RESPUESTA:  --------------- */
 
 void insertMiddle(node* head, node* newNode){
-  if (!head || !newNode) return;
+ if (!head || !newNode) return;
 
-  node *slow = 
+    node *antes = head, *poste = head;
+    while (poste && poste->next) {
+      poste = poste->next->next;
+        if (poste && poste->next) antes = antes->next;
+    }
+
+    newNode->next = antes->next;
+    newNode->prev = antes;
+    if (antes->next) antes->next->prev = newNode;
+    antes->next = newNode;
 }
 
 
@@ -204,8 +213,8 @@ int ex02()
   LD2nuevo.value = 11;
 
   //Llamadas a las funciones que tienes que crear.
-  //insertMiddle(LD1,&LD1nuevo);
-  //insertMiddle(LD2,&LD2nuevo);
+  insertMiddle(LD1,&LD1nuevo);
+  insertMiddle(LD2,&LD2nuevo);
 
   printf("\nLista Doble 1 después del cambio:\n");
   printlist(LD1);
@@ -334,7 +343,7 @@ int main()
   printf("=== E01: Mandar al inicio\n");
   ex01();
   printf("\n=== E02: Ingresar nodo a la mitad\n");
-  //ex02();
+  ex02();
   printf("\n=== E03: Arreglo de listas\n");
   //ex03();
   printf("\n=== E04: Destinos \n");
