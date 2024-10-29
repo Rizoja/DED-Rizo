@@ -339,6 +339,47 @@ int ex05()
 /* ----------  INICIO RESPUESTA:  --------------- */
 //Agrega aquí tus estructuras, funciones del Stack, y función "reverse".
 
+typedef struct {
+    char data[100];
+    int top;
+} Stack;
+
+void initStack(Stack *s) {
+    s->top = -1;
+}
+
+int isEmpty(Stack *s) {
+    return s->top == -1;
+}
+
+void push(Stack *s, char value) {
+    if (s->top < 99) {
+        s->data[++(s->top)] = value;
+    }
+}
+
+char pop(Stack *s) {
+    return isEmpty(s) ? '\0' : s->data[(s->top)--];
+}
+
+void reverse(char *str) {
+    Stack s;
+    initStack(&s);
+
+    // Push :)
+    int i = 0;
+    while (str[i] != '\0') {
+        push(&s, str[i]);
+        i++;
+    }
+
+    // Pop :)
+    i = 0;
+    while (!isEmpty(&s)) {
+        str[i++] = pop(&s);
+    }
+}
+
 /* ----------  FIN RESPUESTA:  --------------- */
 
 void ex06()
@@ -347,6 +388,8 @@ void ex06()
   printf("%s\n", prueba); //Debe imprimir "ITESO"
   /* ----------  INICIO RESPUESTA:  --------------- */
   //Llama tu función aquí.
+
+  reverse(prueba);
 
   /* ----------  FIN RESPUESTA:  --------------- */
   printf("%s\n", prueba); //Debe imprimir "OSETI"
@@ -366,6 +409,6 @@ int main()
   printf("\n=== E05: Password \n");
   //ex05();
   printf("\n=== E06: Reverse \n");
-  //ex06();
+  ex06();
   return 0;
 }
