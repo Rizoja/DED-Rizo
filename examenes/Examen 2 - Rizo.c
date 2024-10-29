@@ -291,9 +291,35 @@ int ex04()
 /* ----------  INICIO RESPUESTA:  --------------- */
   FILE *file = fopen("destinos.txt", "r+");
 
+  int numRecord;
+    fscanf(file, "%d\n", &numRecord); 
 
+  
+  char **cities = (char**)malloc(numRecord * sizeof(char*));
+  int *costs = (int*)malloc(numRecord * sizeof(int));
 
+  
+  for (int i = 0; i < numRecord; i++) {
+      cities[i] = (char*)malloc(50 * sizeof(char)); 
+      fscanf(file, "%s $%d\n", cities[i], &costs[i]); 
+  }
 
+  
+  printf("Ciudad y costo:\n");
+  for (int i = 0; i < numRecord; i++) {
+      printf("Ciudad: %s, Costo: %d\n", cities[i], costs[i]);
+  }
+
+  fseek(file, 0, SEEK_END);
+  fprintf(file, "\nJesús Antonio Rizo Muñiz\n");
+
+  
+  for (int i = 0; i < numRecord; i++) {
+      free(cities[i]); 
+  }
+  free(cities); 
+  free(costs);  
+  fclose(file); 
 
 
 /* ----------  FIN RESPUESTA:  --------------- */
@@ -411,7 +437,7 @@ int main()
   printf("\n=== E03: Arreglo de listas\n");
   ex03();
   printf("\n=== E04: Destinos \n");
-  //ex04();
+  ex04();
   printf("\n=== E05: Password \n");
   //ex05();
   printf("\n=== E06: Reverse \n");
