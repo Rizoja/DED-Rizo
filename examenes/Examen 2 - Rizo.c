@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
-char alumno[100] = "Jesús Antonio Rizo Muñiz";
+char alumno[100] = "Jesús Antonio Rizo Muñiz :)";
 
 /*  
 
