@@ -96,19 +96,16 @@ node LD1nuevo, LD2nuevo;
 
 node* mandarInicio(node* head){
   if (!head || !head ->next) return head;
-  node
-
-
-
-
-
-
-
-
+   node *prev = NULL, *curr = head;
+    while (curr->next) {
+        prev = curr;
+        curr = curr->next;
+    }
+    prev->next = NULL;
+    curr->next = head;
+    head = curr;
+    return head;
 }
-
-
-
 
 
 /* ----------  FIN RESPUESTA:  --------------- */
@@ -132,6 +129,9 @@ int ex01()
 
 /* ----------  INICIO RESPUESTA:  --------------- */
 // Espacio para que mandes llamar tu función y compruebes el resultado.
+
+  
+
 
 /* ----------  FIN RESPUESTA:  --------------- */
   
@@ -195,8 +195,8 @@ int ex02()
   LD2nuevo.value = 11;
 
   //Llamadas a las funciones que tienes que crear.
-  insertMiddle(LD1,&LD1nuevo);
-  insertMiddle(LD2,&LD2nuevo);
+  //insertMiddle(LD1,&LD1nuevo);
+  //insertMiddle(LD2,&LD2nuevo);
 
   printf("\nLista Doble 1 después del cambio:\n");
   printlist(LD1);
