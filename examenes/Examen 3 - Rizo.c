@@ -28,18 +28,21 @@ char alumno[100] = "Jesús Antonio Rizo Muñiz";
 
 1)	Explica cuál es la diferencia entre una función pública y una función privada?
 
-  R= Las Funciones públicas, son accesibles desde cualquier parte del programa o módulo que utiliza la librería. 
+  R= Las Funciones públicas, son accesibles desde cualquier parte del programa que utiliza la librería. 
   Pertenecen al archivo de encabezado (.h) y forman parte de la interfaz pública del TDA. 
   A diferencia de las Funciones privadas, que solo son accesibles dentro del archivo donde se definen. 
-  Estas funciones suelen estar declaradas como static en C y no forman parte de l 
+  Estas funciones suelen estar declaradas como static en C y no forman parte de la interfaz pública. 
+  Se usan para realizar operaciones internas sin ser visibles al usuario de la librería.
 
 2)  Menciona una diferencia entre una cola (ordinaria) y una cola de prioridad, desde el punto de vista de su comportamiento, no de su implementación:
 
-  R=
+  R= En la cola ordinaria, los elementos se consideran en el orden en que llegan, siguiendo la política FIFO (First In, First Out).
+    y en la cola de prioridad, los elementos se ven según su prioridad, sin importar el orden en el que llegaron. 
 
 3)  Explica a detalle la importancia de la función "hash" al implementar un Mapa / Tabla Hash, y por qué se le aplica la operación de módulo.
 
-  R=
+  R= La importancia de la función hash al implementarla en un mapa, es que convierte una "clave" en un índice dentro de un rango predefinido. 
+  Esto nos permite acceder  al valor 
 
 4)	¿Por qué implementamos un conjunto mediante un árbol binario de búsqueda en lugar de utilizar una lista enlazada o un arreglo? Justifica bien tu respuesta.	
 
