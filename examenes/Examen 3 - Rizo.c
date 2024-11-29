@@ -56,11 +56,14 @@ El árbol binario de búsqueda también mantiene los elementos en orden, lo que 
 5)	Al crear un TDA / Librería ¿Por qué utilizamos void pointers en lugar de datos de un tipo específico?
 
   R= Los void pointers permiten que el TDA sea genérico y pueda almacenar cualquier tipo de dato sin depender de un tipo específico como int o float.
-
+  Esto proporciona flexibilidad al TDA, permitiendo que pueda usarse en diferentes contextos, ya que el programa que utiliza el TDA decide cómo interpretar los datos almacenados.
 
 6) Menciona una diferencia entre un conjunto y un mapa, desde el punto de vista de su comportamiento, no de su implementación:
 
-  R=
+  R= La principal diferencia entre un conjunto y un mapa, desde el punto de vista de su comportamiento, es que un conjunto se utiliza para almacenar únicamente valores únicos, sin asociarlos con ningún otro dato, 
+  mientras que un mapa almacena pares clave-valor, donde cada clave única está asociada a un valor específico. 
+  En un conjunto, las operaciones se centran en verificar si un valor está presente, añadirlo si no existe o eliminarlo. 
+  En un mapa, además de verificar la existencia de una clave, se pueden realizar operaciones adicionales como recuperar o modificar el valor asociado a esa clave
 
 ******************************************************** Teoría 2: 4 preguntas de 10 puntos       /40 pts **************************************************************
 
