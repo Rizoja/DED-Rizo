@@ -82,10 +82,10 @@ El árbol binario de búsqueda también mantiene los elementos en orden, lo que 
         3         16
       /   \      /   \
     1      8    11     18 
-   /     /   \   \       \
-  0     6     5   14      20
-                 /
-               13
+   /     /      \       \
+  0     6        14      20
+        /         /
+       5         13
 
 
 
@@ -93,15 +93,15 @@ El árbol binario de búsqueda también mantiene los elementos en orden, lo que 
     4, 7, 10, 5, 12, 15, 22, 8, 17, 1
     a) ¿Cómo queda el montículo binario (MaxHeap) inicialmente?  Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
  
-      R=
+      R= [22, 17, 15, 8, 12, 10, 7, 4, 5, 1]
 
     b) ¿Cómo queda el montículo binario (MaxHeap) de arriba después de ejecutar offer(18)?  Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
  
-      R=
+      R= [22, 18, 15, 17, 12, 10, 7, 4, 5, 1, 8]
 
     b) ¿Cómo queda el montículo binario (MaxHeap) de arriba después de ejecutar poll()? Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
 
-      R=
+      R= [18, 17, 15, 8, 12, 10, 7, 4, 5, 1]
 
 9)	Asume que existe una Tabla Hash que almacena fechas, y se encuentra en el siguiente estado:
 
@@ -130,6 +130,17 @@ Asume que el hashing se hace de la siguiente manera:
   Dibuja la Tabla Hash resultante después de ejecutar map_put("02/02/2000") y map_put("11/11/1111");
   
   R=
+    HashIndex
+    0   -> |31/10/1987| -> |11/11/1111| -> NULL
+    1   -> |02/06/2012| -> |19/01/1123| -> NULL
+    2   -> |01/01/2024| -> |28/05/1546| -> |02/02/2000| -> NULL
+    3   -> NULL
+    4   -> |03/11/1990| -> NULL
+    5   -> |31/12/1987| -> |15/03/2025| -> |19/07/1999| -> NULL
+    6   -> |31/08/2005| -> NULL
+
+
+
 
 
 10)	Acabas de instalar la siguiente librería para el uso de colas simples:
@@ -178,7 +189,7 @@ Asume que el hashing se hace de la siguiente manera:
 
   Escribe o dibuja el estado final de la cola "q".
 
-  R= 
+  R= [ Jorge, Sofía, Erick, Diego, Nicole ]
 
 
 ******************************************************** Ejercicio 1: Mapa                 /20 pts **************************************************************
