@@ -42,15 +42,21 @@ char alumno[100] = "Jesús Antonio Rizo Muñiz";
 3)  Explica a detalle la importancia de la función "hash" al implementar un Mapa / Tabla Hash, y por qué se le aplica la operación de módulo.
 
   R= La importancia de la función hash al implementarla en un mapa, es que convierte una "clave" en un índice dentro de un rango predefinido. 
-  Esto nos permite acceder  al valor 
+  Esto nos permite acceder al valor asociado con esa clave, logrando eficientar las búsquedas en comparación con listas o arreglos.
+  La operación de módulo asegura que el índice generado (clave) esté dentro del rango válido del arreglo de la tabla hash. 
+
 
 4)	¿Por qué implementamos un conjunto mediante un árbol binario de búsqueda en lugar de utilizar una lista enlazada o un arreglo? Justifica bien tu respuesta.	
 
-  R=
+  R= Un "árbol binario de búsqueda" tiene una complejidad de búsqueda, inserción y eliminación promedio de O(log n) (Notación "Big-O"), lo que es más eficiente que
+una lista enlazada, donde se requiere una búsqueda lineal (O(n)) para determinar si un elemento ya existe.
+El Arreglo también necesita una búsqueda lineal para verificar duplicados, además de requerir redimensionamiento dinámico si se llena.
+El árbol binario de búsqueda también mantiene los elementos en orden, lo que permite recorridos en tiempo lineal para operaciones como listar elementos ordenados.
 
 5)	Al crear un TDA / Librería ¿Por qué utilizamos void pointers en lugar de datos de un tipo específico?
 
-  R=
+  R= Los void pointers permiten que el TDA sea genérico y pueda almacenar cualquier tipo de dato sin depender de un tipo específico como int o float.
+
 
 6) Menciona una diferencia entre un conjunto y un mapa, desde el punto de vista de su comportamiento, no de su implementación:
 
