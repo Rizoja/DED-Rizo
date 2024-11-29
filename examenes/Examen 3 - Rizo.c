@@ -77,7 +77,16 @@ El árbol binario de búsqueda también mantiene los elementos en orden, lo que 
    /     /              \
   0     6                20
 
-  R=
+  R=         10
+          /      \
+        3         16
+      /   \      /   \
+    1      8    11     18 
+   /     /   \   \       \
+  0     6     5   14      20
+                 /
+               13
+
 
 
 8) Asume que se crea un montículo binario "máximo" a partir del siguiente arreglo.:
